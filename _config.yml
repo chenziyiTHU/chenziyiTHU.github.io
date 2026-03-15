@@ -121,12 +121,12 @@ disqus_shortname: al-folio # put your disqus shortname
 # If you have blog posts published on medium.com or other external sources,
 # you can display them in your blog by adding a link to the RSS feed.
 external_sources:
-  - name: medium.com
-    rss_url: https://medium.com/@al-folio/feed
-  - name: Google Blog
-    posts:
-      - url: https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/
-        published_date: 2024-05-14
+  # - name: medium.com
+  #   rss_url: https://medium.com/@al-folio/feed
+  # - name: Google Blog
+  #   posts:
+  #     - url: https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/
+  #       published_date: 2024-05-14
 
 # -----------------------------------------------------------------------------
 # Newsletter
@@ -148,8 +148,8 @@ collections:
     defaults:
       layout: post
     output: true
-  # projects:
-  #   output: true
+  projects:
+    output: true
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
@@ -192,9 +192,11 @@ exclude:
   - vendor
   - _pages/teaching.md
   - _pages/profiles.md
-  - _projects/
-  - _pages/projects.md
+  # - _projects/
+  # - _pages/projects.md
   - _pages/repositories.md
+  - _pages/publications.md
+  - _books/
 keep_files:
   - CNAME
   - .nojekyll
