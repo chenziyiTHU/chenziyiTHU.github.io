@@ -30,7 +30,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/playground/";
           },
-        },{id: "post-test",
+        },{id: "post-数理统计-终极总结",
+        
+          title: "《数理统计》终极总结",
+        
+        description: "《数理统计》终极总结",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/Mathematical-Statistics/";
+          
+        },
+      },{id: "post-test",
         
           title: "Test",
         
