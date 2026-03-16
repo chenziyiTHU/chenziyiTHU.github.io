@@ -26,6 +26,68 @@ $(document).ready(function () {
     var navSelector = "#toc-sidebar";
     var $myNav = $(navSelector);
     Toc.init($myNav);
+
+    // Custom multi-level TOC init (replaces Toc.init which only supports 2 levels)
+    // (function buildToc($nav) {
+    //   $nav.attr("data-toggle", "toc");
+    //   var $scope = $("#markdown-content").length ? $("#markdown-content") : $("body");
+
+    //   // Find the top-most heading level present
+    //   var topLevel = 6;
+    //   for (var i = 1; i <= 6; i++) {
+    //     if ($scope.find("h" + i).not("[data-toc-skip]").length > 0) {
+    //       topLevel = i;
+    //       break;
+    //     }
+    //   }
+
+    //   // Collect all headings from topLevel down to h6
+    //   var selectors = [];
+    //   for (var i = topLevel; i <= 6; i++) selectors.push("h" + i);
+    //   var $headings = $scope.find(selectors.join(",")).not("[data-toc-skip]");
+    //   if ($headings.length === 0) return;
+
+    //   var $rootList = $('<ul class="nav navbar-nav"></ul>');
+    //   $nav.append($rootList);
+
+    //   // Stack tracks nesting: [{level, $list}]
+    //   var stack = [{ level: topLevel - 1, $list: $rootList }];
+
+    //   $headings.each(function () {
+    //     var $h = $(this);
+    //     var level = parseInt(this.tagName[1], 10);
+
+    //     // Ensure heading has an id for anchor links
+    //     if (!this.id) {
+    //       var base = $h.text().trim().toLowerCase()
+    //         .replace(/[^\w\s-]/g, "").replace(/\s+/g, "-")
+    //         .substring(0, 64).replace(/^-+|-+$/g, "") || this.tagName.toLowerCase();
+    //       var id = base, n = 1;
+    //       while (document.getElementById(id)) id = base + "-" + n++;
+    //       this.id = id;
+    //     }
+
+    //     // Pop stack until parent level is less than current level
+    //     while (stack.length > 1 && stack[stack.length - 1].level >= level) {
+    //       stack.pop();
+    //     }
+
+    //     var $a = $('<a class="nav-link"></a>')
+    //       .attr("href", "#" + this.id)
+    //       .text($h.data("toc-text") || $h.text());
+    //     var $li = $("<li></li>").append($a);
+    //     stack[stack.length - 1].$list.append($li);
+
+    //     // Prepare a child list for potential sub-headings
+    //     var $childList = $('<ul class="nav navbar-nav"></ul>');
+    //     $li.append($childList);
+    //     stack.push({ level: level, $list: $childList });
+    //   });
+
+    //   // Remove empty lists
+    //   $nav.find("ul:empty").remove();
+    // })($myNav);
+
     $("body").scrollspy({
       target: navSelector,
     });
