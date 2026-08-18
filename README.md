@@ -1,3 +1,5 @@
+
+
 # al-folio
 
 <div align="center">
@@ -314,7 +316,7 @@ You can add extra information to a publication, like a PDF file in the [assets/p
 
 ### Collections
 
-This Jekyll theme implements `collections` to let you break up your work into categories. The theme comes with two default collections: `news` and `projects`. Items from the `news` collection are automatically displayed on the home page. Items from the `projects` collection are displayed on a responsive grid on projects page.
+This Jekyll theme implements `collections` to let you break up your work into categories. The theme comes with two default collections: `news` and `projects`. Items from the `news` collection are automatically displayed on the home page. Items from the `projects` collection are displayed on a responsive grid on projects page. This repository also enables a `books` collection in [\_config.yml](_config.yml).
 
 [![Projects Preview](readme_preview/projects.png)](https://alshedivat.github.io/al-folio/projects/)
 
